@@ -1,0 +1,65 @@
+.signup-form,
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  filter: brightness(80%); /* Dim the images */
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.signup-form h2,
+.login-form h2 {
+  text-align: center;
+  color: #333;
+}
+
+.signup-form h2 {
+  text-align: center;
+  color: #fff;
+}
+
+.signup-form label,
+.login-form label {
+  color: #333;
+}
+
+.signup-form label {
+  color: #fff;
+}
+
+.signup-form input,
+.login-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.signup-form button,
+.login-form button {
+  padding: 10px 20px;
+  background-color: #ff7f50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.signup-form button:hover,
+.login-form button:hover {
+  background-color: #ff6347;
+}
+
+.form-switch {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+ 

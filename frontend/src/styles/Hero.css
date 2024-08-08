@@ -1,0 +1,172 @@
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .hero-overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dim transparent overlay */
+    transition: opacity 0.3s ease-out;
+  }
+  
+  .carousel-container img {
+    filter: brightness(80%); /* Dim the images */
+    transition: filter 0.3s ease-out;
+  }
+  
+  .hero-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    z-index: 10;
+  }
+  
+  .logo {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px; /* Add spacing between the links */
+    padding-right: 20px; /* Add padding to the right to prevent overflow */
+    flex-wrap: wrap; /* Ensure links wrap on smaller screens */
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px; /* Add padding to increase the clickable area */
+    transition: background-color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Add a hover effect */
+    border-radius: 5px; /* Round the corners */
+  }
+  
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    color: white;
+    z-index: 10;
+    flex-wrap: wrap; /* Ensure elements wrap on smaller screens */
+    gap: 20px;
+    transition: opacity 0.3s ease-out; /* Smooth transition for opacity */
+    flex-direction: row; /* Ensure the items are in a row */
+  }
+  
+  .hero-text {
+    max-width: 100%;
+    text-align: left; /* Align text to the left */
+    flex: 1; /* Allow the text section to take available space */
+  }
+  
+  @keyframes rainbow {
+    100% { color: red; }
+    14% { color: orange; }
+    50% { color: yellow; }
+    42% { color: green; }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
+  }
+  
+  @keyframes gradient-background {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .hero-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: rainbow 5s linear infinite;
+    background: linear-gradient(270deg, #ff7f50, #ff6347, #ff4500, #ff6347, #ff7f50);
+    background-size: 800% 800%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-background 5s ease infinite;
+  }
+  
+  .hero-text p {
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    animation: rainbow 5s linear infinite;
+    background: linear-gradient(270deg, #ff7f50, #ff6347, #ff4500, #ff6347, #ff7f50);
+    background-size: 800% 800%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-background 5s ease infinite;
+  }
+  
+  .hero-button {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: transparent; /* Make the button background transparent */
+    color: white; /* Keep the text color white */
+    text-decoration: none;
+    border: 2px solid #ff7f50; /* Add a border with the original background color */
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold; /* Make the text bold */
+    transition: background-color 0.3s ease-out, color 0.3s ease-out; /* Add transition for color changes */
+  }
+  
+  .hero-button:hover {
+    background-color: #ff6347; /* Change the background color on hover */
+    color: white; /* Ensure the text color remains white on hover */
+    border-color: #ff6347; /* Change the border color on hover */
+  }
+
+  .signup-form {
+    margin: 20px; /* Adjust margin if necessary */
+    padding: 10px; /* Adjust padding if necessary */
+  }
+  
+  /* Media Queries for smaller screens */
+  @media (max-width: 768px) {
+    .hero-text h1 {
+      font-size: 36px;
+    }
+  
+    .hero-text p {
+      font-size: 18px;
+    }
+  
+    .hero-button {
+      font-size: 16px;
+      padding: 8px 16px;
+    }
+  }
