@@ -20,10 +20,10 @@ const Hero = () => {
         <div className="hero-header">
           <div className="logo">ScuPay</div>
           <div className="nav-links">
-            <Link to="/home">Home</Link>
-            <Link to="/contact">Contact</Link>
-            <Link to="/signup">Login</Link>
-            <Link to="/payment">Payment</Link>
+            <Link to="/"></Link>
+            <Link to="/"></Link>
+            <Link to="/"></Link>
+            <Link to="/"></Link>
           </div>
         </div>
         <Carousel
