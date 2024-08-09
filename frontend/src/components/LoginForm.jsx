@@ -23,8 +23,8 @@ const LoginForm = ({ onSwitch }) => {
     e.preventDefault();
     const { email, password, role } = formData;
     const endpoint = role === 'admin'
-      ? 'http://localhost:3000/api/auth/admin/login'
-      : 'http://localhost:3000/api/auth/student/login';
+      ? 'https://serverpayment-2.onrender.com/api/auth/admin/login'
+      : 'https://serverpayment-2.onrender.com/api/auth/student/login';
     
     try {
       const response = await axios.post(endpoint, { email, password });

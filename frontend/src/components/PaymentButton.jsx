@@ -24,7 +24,7 @@ const PaymentButton = () => {
 
     const fetchSchools = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/schools');
+        const response = await axios.get('https://serverpayment-2.onrender.com/api/schools');
         setSchools(response.data);
       } catch (error) {
         console.error('Error fetching schools:', error);
@@ -40,13 +40,13 @@ const PaymentButton = () => {
       let endpoint = '';
       switch(paymentMethod) {
         case 'paypal':
-          endpoint = 'http://localhost:3000/api/payments/initiate-paypal-payment';
+          endpoint = 'https://serverpayment-2.onrender.com/api/payments/initiate-paypal-payment';
           break;
         case 'flutterwave':
-          endpoint = 'http://localhost:3000/api/payments/initiate-flutterwave-payment';
+          endpoint = 'https://serverpayment-2.onrender.com/api/payments/initiate-flutterwave-payment';
           break;
         case 'whatsapp':
-          endpoint = 'http://localhost:3000/api/payments/initiate-whatsapp-payment';
+          endpoint = 'https://serverpayment-2.onrender.com/api/payments/initiate-whatsapp-payment';
           break;
         default:
           throw new Error('Unsupported payment method');

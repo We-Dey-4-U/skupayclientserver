@@ -25,7 +25,7 @@ const SignupForm = () => {
     e.preventDefault();
     console.log('Form Data:', formData); // Log the form data
     try {
-      await axios.post('http://localhost:3000/api/auth/student/register', formData);
+      await axios.post('https://serverpayment-2.onrender.com/api/auth/student/register', formData);
       alert('Sign Up successful. Please log in.');
       setIsLogin(true);
     } catch (error) {
