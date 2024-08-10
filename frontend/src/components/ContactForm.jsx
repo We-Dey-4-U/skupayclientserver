@@ -24,7 +24,7 @@ const ContactForm = () => {
           <div className="contact-info-container">
             <h3>Contact Information</h3>
             <p><FontAwesomeIcon icon={faEnvelope} /> <strong>Email:</strong> info@skupay.ng</p>
-            <p><FontAwesomeIcon icon={faPhone} /> <strong>Phone:</strong> +(234) 0708 158 0566</p>
+            <p><FontAwesomeIcon icon={faPhone} /> <strong>Phone:</strong> +(234) 09052632663</p>
             <div className="social-media">
               <h4>Follow Us</h4>
               <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebook} /></a>
