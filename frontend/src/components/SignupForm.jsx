@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import LoginForm from './LoginForm';
 import '../styles/SignupForm.css';
@@ -11,7 +11,22 @@ const SignupForm = () => {
     password: '',
     school_name: ''
   });
+  const [schools, setSchools] = useState([]);
   const [isLogin, setIsLogin] = useState(false);
+
+  // Fetch schools when the component mounts
+  useEffect(() => {
+    const fetchSchools = async () => {
+      try {
+        const response = await axios.get('https://serverpayment-2.onrender.com/api/schools');
+        setSchools(response.data);
+      } catch (error) {
+        console.error('Error fetching schools:', error);
+      }
+    };
+
+    fetchSchools();
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -84,14 +99,20 @@ const SignupForm = () => {
         required
       />
       <label htmlFor="school_name">School Name</label>
-      <input
-        type="text"
+      <select
         id="school_name"
         name="school_name"
         value={formData.school_name}
         onChange={handleChange}
         required
-      />
+      >
+        <option value="" disabled>Select your school</option>
+        {schools.map((school) => (
+          <option key={school._id} value={school.school_name}>
+            {school.school_name}
+          </option>
+        ))}
+      </select>
       <button type="submit">Sign Up</button>
       <p>
         Already have an account?{' '}
