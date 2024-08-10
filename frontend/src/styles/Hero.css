@@ -158,11 +158,16 @@
   /* Media Queries for smaller screens */
   @media (max-width: 768px) {
     .hero-text h1 {
-      font-size: 36px;
+      font-size: 20px;
+  margin-top: 5rem;
+  text-align: center;
     }
   
     .hero-text p {
-      font-size: 18px;
+      font-size: 20px;
+      font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
     }
   
     .hero-button {

@@ -49,7 +49,7 @@ const Hero = () => {
         <div className="hero-content" ref={contentRef}>
           <div className="hero-text">
             <h1>Everything is easier with our online payment solution</h1>
-            <p>Scupay - an easy way to pay your children's school fees</p>
+            <p></p>
            
           </div>
           <div className="signup-form">
